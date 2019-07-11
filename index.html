@@ -268,7 +268,7 @@ ClusterIcon.prototype.show = function () {
     img += "'>";
     this.div_.innerHTML = img + "<div style='" +
         "position: absolute;" +
-        "top: " + 20 + "px;" +
+        "top: " + this.anchorText_[0] - 20+ "px;" +
         "left: " + this.anchorText_[1] + "px;" +
         "color: " + this.textColor_ + ";" +
         "font-size: " + this.textSize_ + "px;" +
@@ -278,6 +278,7 @@ ClusterIcon.prototype.show = function () {
         "text-decoration: " + this.textDecoration_ + ";" +
         "text-align: center;" +
         "width: 25%;" +
+        "height: 20px" +
         "line-height:" + this.height_ + "px;" +
         "'>" + this.sums_.text + "</div>";
     if (typeof this.sums_.title === "undefined" || this.sums_.title === "") {
