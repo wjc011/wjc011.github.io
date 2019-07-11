@@ -336,7 +336,7 @@ ClusterIcon.prototype.createCss = function (pos) {
   var style = [];
   style.push("cursor: pointer;");
   style.push("position: absolute; top: " + pos.y + "px; left: " + pos.x + "px;");
-  style.push("width: " + this.width_ + "px; height: " + this.height_ + "px;");
+  style.push("width: " + this.width_ + "px; height: " + this.height_ - 10 + "px;");
   style.push("-webkit-user-select: none;");
   style.push("-khtml-user-select: none;");
   style.push("-moz-user-select: none;");
