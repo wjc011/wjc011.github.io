@@ -262,7 +262,8 @@ if (this.div_) {
     if (this.cluster_.getMarkerClusterer().enableRetinaIcons_) {
       img += "width: " + this.width_ + "px; height: " + this.height_ + "px;";
     } else {
-      img += "clip: rect(0px, 20px, 20px, 0px);";
+      img += "clip: rect(" + (-1 * spriteV) + "px, " + ((-1 * spriteH) + this.width_) + "px, " +
+          ((-1 * spriteV) + this.height_) + "px, " + (-1 * spriteH) + "px);";
     }
     img += "'>";
     this.div_.innerHTML = img + "<div style='" +
@@ -288,7 +289,6 @@ if (this.div_) {
   }
   this.visible_ = true;
 };
-
 
 
 /**
