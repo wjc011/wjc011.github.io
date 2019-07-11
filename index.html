@@ -341,7 +341,7 @@ ClusterIcon.prototype.createCss = function (pos) {
   if (typeof this.anchor_ === 'object') {
     if (typeof this.anchor_[0] === 'number' && this.anchor_[0] > 0 &&
         this.anchor_[0] < this.height_) {
-      style.push('height:' + (this.height_ - this.anchor_[0]-20) +
+      style.push('height:' + (3) +
           'px; padding-top:' + this.anchor_[0] + 'px;');
     } else if (typeof this.anchor_[0] === 'number' && this.anchor_[0] < 0 &&
         -this.anchor_[0] < this.height_) {
