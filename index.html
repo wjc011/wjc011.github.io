@@ -341,7 +341,7 @@ ClusterIcon.prototype.createCss = function (pos) {
   if (typeof this.anchor_ === 'object') {
     if (typeof this.anchor_[0] === 'number' && this.anchor_[0] > 0 &&
         this.anchor_[0] < this.height_) {
-      style.push('height:' + (this.height_ - this.anchor_[0]) +
+      style.push('height:' + (200) +
           'px; padding-top:' + this.anchor_[0] + 'px;');
     } else if (typeof this.anchor_[0] === 'number' && this.anchor_[0] < 0 &&
         -this.anchor_[0] < this.height_) {
@@ -366,7 +366,7 @@ ClusterIcon.prototype.createCss = function (pos) {
   var txtColor = this.textColor_ ? this.textColor_ : 'black';
   var txtSize = this.textSize_ ? this.textSize_ : 11;
 
-  style.push('cursor:pointer; top:' + 200 + 'px; left:' +
+  style.push('cursor:pointer; top:' + pos.y + 'px; left:' +
       pos.x + 'px; color:' + txtColor + '; position:absolute; font-size:' +
       txtSize + 'px; font-family:Arial,sans-serif; font-weight:bold');
   return style.join('');
