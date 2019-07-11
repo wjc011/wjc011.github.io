@@ -279,7 +279,7 @@ ClusterIcon.prototype.show = function () {
         "text-align: center;" +
         "width: " + this.width_ + "px;" +
         "height: 0px;" +
-        "line-height: 0px;" +
+        "line-height:" + this.height_ + "px;" +
         "'>" + this.sums_.text + "</div>";
     if (typeof this.sums_.title === "undefined" || this.sums_.title === "") {
       this.div_.title = this.cluster_.getMarkerClusterer().getTitle();
