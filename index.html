@@ -278,8 +278,7 @@ ClusterIcon.prototype.show = function () {
         "font-style: " + this.fontStyle_ + ";" +
         "text-decoration: " + this.textDecoration_ + ";" +
         "text-align: center;" +
-        "width: " + this.width_ + "px;" +
-        "height: 0px;" +
+        "clip-path: circle(30px at center);" +
         "line-height:" + this.height_ + "px;" +
         "'>" + this.sums_.text + "</div>";
     if (typeof this.sums_.title === "undefined" || this.sums_.title === "") {
