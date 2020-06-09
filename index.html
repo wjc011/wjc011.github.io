@@ -229,6 +229,7 @@ ClusterIcon.prototype.draw = function () {
   if (this.visible_) {
     var pos = this.getPosFromLatLng_(this.center_);
     this.div_.style.top = pos.y + "px";
+    this.div_.style.height = "20%";
     this.div_.style.left = pos.x + "px";
     this.div_.style.zIndex = google.maps.Marker.MAX_ZINDEX + 1; // Put above all unclustered markers
   }
@@ -262,7 +263,8 @@ ClusterIcon.prototype.show = function () {
     if (this.cluster_.getMarkerClusterer().enableRetinaIcons_) {
       img += "width: " + this.width_ + "px; height: " + this.height_ + "px;";
     } else {
-      img += "clip: rect(" + (-1 * spriteV) + "px, " + ((-1 * spriteH) + this.width_) + "px, 50px, " + (-1 * spriteH) + "px);";
+      img += "clip: rect(" + (-1 * spriteV) + "px, " + ((-1 * spriteH) + this.width_) + "px, " +
+          ((-1 * spriteV) + this.height_) + "px, " + (-1 * spriteH) + "px);";
     }
     img += "'>";
     this.div_.innerHTML = img + "<div style='" +
@@ -305,7 +307,7 @@ ClusterIcon.prototype.useStyle = function (sums) {
   this.height_ = style.height;
   this.width_ = style.width;
   this.anchorText_ = style.anchorText || [0, 0];
-  this.anchorIcon_ = style.anchorIcon || [parseInt(this.height_ / 2, 10), parseInt(this.width_ / 2, 10)];
+  this.anchorIcon_ =  [parseInt(this.height_/2, 10), parseInt(this.width_ / 2, 10)];
   this.textColor_ = style.textColor || "black";
   this.textSize_ = style.textSize || 11;
   this.textDecoration_ = style.textDecoration || "none";
@@ -336,7 +338,7 @@ ClusterIcon.prototype.createCss = function (pos) {
   var style = [];
   style.push("cursor: pointer;");
   style.push("position: absolute; top: " + pos.y + "px; left: " + pos.x + "px;");
-  style.push("width: " + this.width_ + "px; height: " + this.height_ + "px;");
+  style.push("width: " + this.width_ + "px; height: 30px;");
   style.push("-webkit-user-select: none;");
   style.push("-khtml-user-select: none;");
   style.push("-moz-user-select: none;");
