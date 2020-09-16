@@ -263,12 +263,11 @@ ClusterIcon.prototype.show = function () {
     if (this.cluster_.getMarkerClusterer().enableRetinaIcons_) {
       img += "width: " + this.width_ + "px; height: " + this.height_ + "px;";
     } else {
-<<<<<<< HEAD
+
       img += "clip: rect(" + (-1 * spriteV) + "px, " + ((-1 * spriteH) + this.width_) + "px, " +
           ((-1 * spriteV) + this.height_) + "px, " + (-1 * spriteH) + "px);";
-=======
+
       img += "clip-path: circle(10px at 65px 50x);";
->>>>>>> e11ee058458f14403dc2f2ac9409d5cdc60dd28b
     }
     img += "'>";
     this.div_.innerHTML = img + "<div style='" +
